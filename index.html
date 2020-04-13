@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<style>
+    body{
+        font-family: sans-serif;
+        position: relative;
+        min-height: 100vh;
+        min-width: 100vh;
+        margin: 0px 0px;
+       
+    }
+    .top-nav{
+        display: flex;
+        text-decoration: none;
+        padding: 20px 30px;
+        justify-content: space-between;
+        font-family: arial, sans-serif;;
+        font-size: 14px;
+    }
+    .link-left{
+        justify-items: flex-start;
+    }
+    .link-left a {
+        color:darkslategray;
+       
+    }
+    .link-left a:hover{
+        color:darkslategray;
+        text-decoration: underline;
+           
+    }
+    .link-right{
+        align-items: auto;
+    }
+    .link-right a{
+        color:black;
+     
+    }
+     .link-right a:hover{
+        color:black;
+        text-decoration: underline;
+    }
+    .link{
+        text-decoration: inherit;
+        padding: 5px 5px;
+        display: inline-block;    
+    }
+    #search-container{
+        min-height: 65vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        flex-direction: column;
+       
+    }
+   
+    #search-input{
+        width: 500px;
+        height: 45px;
+        border-radius: 25px;
+        margin: 20px 0px;
+        border-style: solid;
+        border-width: thin;
+        border-color: rgba(0,0,0,0.1);
+        padding-left: 50px;
+       
+       
+    }  
+    #search-input:hover{
+        box-shadow: 0 2px 15px 0 rgba(17,34,189,.3);
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    .button-container{
+        margin: 10px 3px;
+        /*vertical-align: baseline;
+        */display: inline;
+    }
+    .button{
+        height: 40px;
+        margin: 0px 3px;
+        padding: 0px 10px;
+        border-style: none;
+               
+    }
+    .button:hover{
+        box-shadow: 0 0 0 1px #C9C9C9;
+       
+    }
+    .bot-nav{
+        display: flex;
+        text-decoration: none;
+        bottom: 0px;
+        left: 0px;
+        font-family: sans-serif;
+        font-size: 15px;
+        background-color: #F7F7F7;
+        justify-content: space-between;
+        flex-shrink: 0;
+        border-top: solid;
+        border-width: thin;
+        border-color: #C9C9C9;
+       
+    }
+    .bot-left-nav{
+        justify-items: flex-start;
+        padding: 10px;
+    }
+    .bot-left-nav a {
+        color: #4C4C4C;
+        padding-left: 20px;
+       
+    }
+    .bot-left-nav a:hover{
+        color:darkslategray;
+        text-decoration: underline;
+           
+    }
+    .bot-right-nav{
+        align-items: flex-end;
+        padding: 10px;
+    }
+    .bot-right-nav a{
+        color:#4C4C4C;
+        padding-right: 20px;
+     
+    }
+     .bot-right-nav a:hover{
+        color:black;
+        text-decoration: underline;
+       
+    }
+    .line{
+        border-color: red;
+        width: -100%;
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    p {
+        font-size: 13px;
+    }
+    #signIn{
+        height: 30px;
+        width: 65px;
+        background-color: #368FFA;
+        color:white;
+        padding: 5px 5px;
+        border-style: none;
+        border-radius: 3px;
+    }
+    #allApps{
+        vertical-align: middle;
+        padding: 0px 7px;
+    }
+    #search{
+        position:relative;
+    }
+    #searchIcon{
+        position: absolute;
+        left: 0;
+        padding-left: 10px;
+        top:32px;
+    }
+    #voiceIcon{
+        position: absolute;
+        right: 0;
+        padding-right: 15px;
+        top: 31px;
+    }
+</style>    
+
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="link-left">
+                <a class="link" href="https://about.google/?fg=1&utm_source=google-CA&utm_medium=referral&utm_campaign=hp-header">About</a>
+                <a class="link" href="https://store.google.com/CA?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-CA">Store</a>            
+            </div>
+            <div class="link-right">
+                <a class="link" href="https://mail.google.com/mail/?tab=wm&ogbl">Gmail</a>
+                <a class="link" href="https://www.google.ca/imghp?hl=en&tab=wi&ogbl">Images</a>  
+                <a class="link" href="https://www.google.ca/intl/en/about/products?tab=wh">
+                    <img id="allApps" src="allApps.PNG">  
+                </a>
+                <button class="link" id="signIn" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/">Sign In</button>
+            </div>
+        </div>        
+    </header>
+    <main>
+        <div id="search-container">
+            <div id="logo">
+                <img src="googlelogo_color_272x92dp.png">
+            </div>
+            <form id="search">
+                <input type="text" id="search-input" name="search">
+                <div id="searchIcon">
+                    <img src="searchGlass.PNG">
+                </div>
+                 <div id="voiceIcon">
+                    <img src="voiceSearch.PNG">
+                </div>
+            </form>    
+            <div class="button-container">
+                <button class="button">Google Search</button>
+                <button class="button">I'm Feeling Lucky</button>
+            </div>
+            <div>
+                <p>Google offered in: Français</p>
+            </div>
+        </div>
+    </main>
+    <footer>  
+        <div class="bot-nav">
+            <div class="bot-left-nav">
+                <a class="link" href="https://ads.google.com/intl/en_ca/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                <a class="link" href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                <a class="link" href="//google.com/search/howsearchworks/?fg=1">How Search works</a>
+            </div>
+            <div class="bot-right-nav">
+                <a class="link" href="https://policies.google.com/privacy?fg=1">Privacy</a>
+                <a class="link" href="https://policies.google.com/terms?fg=1">Terms</a>
+                <a class="link" href="https://www.google.com/preferences?hl=en">Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
